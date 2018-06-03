@@ -22,6 +22,8 @@ import (
 var htmlFile *os.File
 var err error
 var cronjobs map[string]int
+
+// let's do a comment here
 var bytesWritten int
 var regel string
 
@@ -42,7 +44,7 @@ func writestatus(cronjobs map[string]int) {
 			fmt.Printf("\nLength: %d bytes", len)
 		}
 	}
-
+	// and here
 }
 
 func miniGrep(path string, searchtext string) (int, error) {
@@ -59,6 +61,7 @@ func miniGrep(path string, searchtext string) (int, error) {
 	for scanner.Scan() {
 		lines = append(lines, scanner.Text())
 	}
+	// and here
 	re := regexp.MustCompile(searchtext)
 	for _, regel := range lines {
 		match := re.FindString(regel)
