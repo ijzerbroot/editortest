@@ -31,6 +31,7 @@ func writestatus(cronjobs map[string]int) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	// more text
 	defer htmlFile.Close()
 
 	// Write map to buffer
@@ -50,6 +51,7 @@ func miniGrep(path string, searchtext string) (int, error) {
 	if err != nil {
 		return 0, err
 	}
+	// and more
 	defer file.Close()
 
 	var lines []string
