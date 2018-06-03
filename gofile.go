@@ -43,10 +43,12 @@ func writestatus(cronjobs map[string]int) {
 }
 
 func miniGrep(path string, searchtext string) (int, error) {
+	// we will just put an extra line here
 	returncode := 0
 	file, err := os.Open(path)
 	if err != nil {
 		return 0, err
+		// and here too
 	}
 	defer file.Close()
 
