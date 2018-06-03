@@ -1,14 +1,15 @@
 package main
 
 import (
+	"Fmt"
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 	"regexp"
 	"time"
 )
 
+//
 //
 // This script is to be placed on the swarm manager in /home/ubuntu/scripts
 //
@@ -24,6 +25,7 @@ var cronjobs map[string]int
 var bytesWritten int
 var regel string
 
+// let's put a comment here
 func writestatus(cronjobs map[string]int) {
 	htmlFile, err := os.Create("/home/ubuntu/jobstatus/metrics/index.html")
 	if err != nil {
